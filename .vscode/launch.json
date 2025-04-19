@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Instruction Finetuning (Full)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/gpt/gpt_instruction_finetuning.py",
+      "args": [],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Instruction Finetuning (Test Mode)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/gpt/gpt_instruction_finetuning.py",
+      "args": ["--test_mode"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+} 
