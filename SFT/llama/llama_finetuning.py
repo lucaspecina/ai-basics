@@ -37,7 +37,7 @@ FIXED_QUESTIONS = [
 
 # Determine device
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-LOGGING_STEP_INTERVAL = 5 # Log responses every 20 steps
+LOGGING_STEP_INTERVAL = 10 # Log responses every N steps
 
 # --- Helper Functions & Classes ---
 def generate_responses(model, tokenizer, questions, device):
