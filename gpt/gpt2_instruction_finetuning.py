@@ -21,7 +21,7 @@ from tqdm import tqdm
 
 # Import from local files in this folder
 from gpt.gpt2_base_download import download_and_load_gpt2
-from gpt.gpt2_base_model import (
+from gpt.gpt_model import (
     calc_loss_loader,
     generate,
     GPTModel,

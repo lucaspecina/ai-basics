@@ -59,7 +59,8 @@ def download_file(url, destination, backup_url=None):
                     print(f"File already exists and is up-to-date: {destination}")
                     return True  # Indicate success without re-downloading
 
-            block_size = 1024  # 1 Kilobyte
+            # block_size = 1024 # 1 Kilobyte
+            block_size = 1024 * 1024 # 1 Megabyte
 
             # Initialize the progress bar with total file size
             progress_bar_description = os.path.basename(download_url)

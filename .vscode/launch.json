@@ -18,6 +18,15 @@
       "args": ["--test_mode"],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Prompt GPT2 Base Model",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/gpt/prompt_base_model.py",
+      "args": [],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
     }
   ]
 } 
