@@ -1,32 +1,17 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Instruction Finetuning (Full)",
-      "type": "python",
-      "request": "launch",
-      "program": "${workspaceFolder}/gpt/gpt_instruction_finetuning.py",
-      "args": [],
-      "console": "integratedTerminal",
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "name": "Instruction Finetuning (Test Mode)",
-      "type": "python",
-      "request": "launch",
-      "program": "${workspaceFolder}/gpt/gpt_instruction_finetuning.py",
-      "args": ["--test_mode"],
-      "console": "integratedTerminal",
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "name": "Prompt GPT2 Base Model",
-      "type": "python",
-      "request": "launch",
-      "program": "${workspaceFolder}/gpt/prompt_base_model.py",
-      "args": [],
-      "console": "integratedTerminal",
-      "cwd": "${workspaceFolder}"
-    }
-  ]
-} 
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug GPT-2 Instruction Finetuning",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/SFT/gpt/gpt2_instruction_finetuning.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [] // Add command line arguments here if needed, e.g., ["--test_mode"]
+        }
+    ]
+}

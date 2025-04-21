@@ -20,8 +20,8 @@ from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 
 # Import from local files in this folder
-from gpt.gpt2_base_download import download_and_load_gpt2
-from gpt.gpt_model import (
+from gpt2_base_download import download_and_load_gpt2
+from gpt_model import (
     calc_loss_loader,
     generate,
     GPTModel,
@@ -163,7 +163,7 @@ def main(test_mode=False):
     #######################################
     # Download and prepare dataset
     #######################################
-    file_path = "instruction-data.json"
+    file_path = r"SFT\gpt\data\instruction-data.json"
     url = "https://raw.githubusercontent.com/rasbt/LLMs-from-scratch/main/ch07/01_main-chapter-code/instruction-data.json"
     data = download_and_load_file(file_path, url)
 
@@ -258,7 +258,7 @@ def main(test_mode=False):
         BASE_CONFIG.update(model_configs[CHOOSE_MODEL])
 
         model_size = CHOOSE_MODEL.split(" ")[-1].lstrip("(").rstrip(")")
-        settings, params = download_and_load_gpt2(model_size=model_size, models_dir="gpt2")
+        settings, params = download_and_load_gpt2(model_size=model_size, models_dir=r"C:\\Users\\YT40432\\Desktop\\lp\\research\\lucaspecina\\ai-basics\\models\\gpt2")
 
         model = GPTModel(BASE_CONFIG)
         load_weights_into_gpt(model, params)
@@ -267,6 +267,27 @@ def main(test_mode=False):
 
     print("Loaded model:", CHOOSE_MODEL)
     print(50*"-")
+
+    # --- Generate responses with the base model before fine-tuning --- # TODO: test this
+    print("Generating base model responses for test set...")
+    base_model_responses = []
+    # Use a temporary list to avoid modifying test_data directly during iteration if needed
+    # or directly add to test_data if modification is safe
+    for i, entry in tqdm(enumerate(test_data), total=len(test_data), desc="Base Model Inference"):
+        input_text = format_input(entry)
+        token_ids = generate(
+            model=model,
+            idx=text_to_token_ids(input_text, tokenizer).to(device),
+            max_new_tokens=256, # Or adjust as needed
+            context_size=BASE_CONFIG["context_length"],
+            eos_id=50256 # Or tokenizer.eos_token_id if available and applicable
+        )
+        generated_text = token_ids_to_text(token_ids, tokenizer)
+        response_text = generated_text[len(input_text):].replace("### Response:", "").strip()
+        test_data[i]["base_model_response"] = response_text # Store base model response
+    print("Base model responses generated.")
+    print(50*"-")
+    # -------------------------------------------------------------------
 
     #######################################
     # Finetuning the model
@@ -288,7 +309,10 @@ def main(test_mode=False):
     train_losses, val_losses, tokens_seen = train_model_simple(
         model, train_loader, val_loader, optimizer, device,
         num_epochs=num_epochs, eval_freq=5, eval_iter=5,
-        start_context=format_input(val_data[0]), tokenizer=tokenizer
+        start_context=format_input(val_data[0]), tokenizer=tokenizer,
+        test_data=test_data,
+        format_input_fn=format_input,
+        base_config=BASE_CONFIG
     )
 
     end_time = time.time()
@@ -324,8 +348,9 @@ def main(test_mode=False):
         json.dump(test_data, file, indent=4)  # "indent" for pretty-printing
     print(f"Responses saved as {test_data_path}")
 
+    root_dir = r"C:\\Users\\YT40432\\Desktop\\lp\\research\\lucaspecina\\ai-basics\\models\\gpt2"
     file_name = f"{re.sub(r'[ ()]', '', CHOOSE_MODEL) }-sft-standalone.pth"
-    torch.save(model.state_dict(), file_name)
+    torch.save(model.state_dict(), os.path.join(root_dir, file_name))
     print(f"Model saved as {file_name}")
 
 

@@ -15,6 +15,7 @@ import tiktoken
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
+from tqdm import tqdm
 
 
 #####################################
@@ -287,7 +288,8 @@ def generate(model, idx, max_new_tokens, context_size, temperature=0.0, top_k=No
 
 
 def train_model_simple(model, train_loader, val_loader, optimizer, device, num_epochs,
-                       eval_freq, eval_iter, start_context, tokenizer):
+                       eval_freq, eval_iter, start_context, tokenizer,
+                       test_data=None, format_input_fn=None, base_config=None):
     # Initialize lists to track losses and tokens seen
     train_losses, val_losses, track_tokens_seen = [], [], []
     tokens_seen, global_step = 0, -1
@@ -295,8 +297,8 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
     # Main training loop
     for epoch in range(num_epochs):
         model.train()  # Set model to training mode
-
-        for input_batch, target_batch in train_loader:
+        combined_loader = tqdm(train_loader, total=len(train_loader), desc=f"Epoch {epoch+1}")
+        for input_batch, target_batch in combined_loader: # Use tqdm loader
             optimizer.zero_grad()  # Reset loss gradients from previous batch iteration
             loss = calc_loss_batch(input_batch, target_batch, model, device)
             loss.backward()  # Calculate loss gradients
@@ -306,15 +308,40 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
 
             # Optional evaluation step
             if global_step % eval_freq == 0:
-                train_loss, val_loss = evaluate_model(
-                    model, train_loader, val_loader, device, eval_iter)
+                model.eval() # Set model to eval mode for evaluation and generation
+                with torch.no_grad():
+                    train_loss = calc_loss_loader(train_loader, model, device, num_batches=eval_iter)
+                    val_loss = calc_loss_loader(val_loader, model, device, num_batches=eval_iter)
                 train_losses.append(train_loss)
                 val_losses.append(val_loss)
                 track_tokens_seen.append(tokens_seen)
                 print(f"Ep {epoch+1} (Step {global_step:06d}): "
                       f"Train loss {train_loss:.3f}, Val loss {val_loss:.3f}")
 
-        # Print a sample text after each epoch
+                # --- Generate intermediate responses ---
+                if test_data is not None and format_input_fn is not None and base_config is not None:
+                    print(f"Generating intermediate responses at step {global_step}...")
+                    for i, entry in tqdm(enumerate(test_data), total=len(test_data), desc="Intermediate Generation", leave=False):
+                        input_text = format_input_fn(entry)
+                        with torch.no_grad():
+                            token_ids = generate(
+                                model=model,
+                                idx=text_to_token_ids(input_text, tokenizer).to(device),
+                                max_new_tokens=256, # Adjust as needed
+                                context_size=base_config["context_length"],
+                                eos_id=50256 # Adjust as needed
+                            )
+                        generated_text = token_ids_to_text(token_ids, tokenizer)
+                        response_text = generated_text[len(input_text):].replace("### Response:", "").strip()
+                        # Store intermediate response, creating the key if it doesn't exist
+                        response_key = f"model_response_step_{global_step}"
+                        test_data[i][response_key] = response_text
+                    print(f"Intermediate responses for step {global_step} stored.")
+                # --- End of intermediate generation ---
+
+                model.train() # Set model back to training mode
+
+        # Print a sample text after each epoch (using the simple text generation)
         generate_and_print_sample(
             model, tokenizer, device, start_context
         )
@@ -323,6 +350,9 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
 
 
 def evaluate_model(model, train_loader, val_loader, device, eval_iter):
+    # This function is now implicitly handled within the eval_freq block
+    # Keeping it here for potential future use or separate evaluation calls
+    # but it's not strictly needed for the current intermediate generation logic
     model.eval()
     with torch.no_grad():
         train_loss = calc_loss_loader(train_loader, model, device, num_batches=eval_iter)
