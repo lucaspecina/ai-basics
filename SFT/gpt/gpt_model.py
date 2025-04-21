@@ -289,7 +289,8 @@ def generate(model, idx, max_new_tokens, context_size, temperature=0.0, top_k=No
 
 def train_model_simple(model, train_loader, val_loader, optimizer, device, num_epochs,
                        eval_freq, eval_iter, start_context, tokenizer,
-                       test_data=None, format_input_fn=None, base_config=None):
+                       test_data=None, format_input_fn=None, base_config=None,
+                       intermediate_eval_subset_size=None):
     # Initialize lists to track losses and tokens seen
     train_losses, val_losses, track_tokens_seen = [], [], []
     tokens_seen, global_step = 0, -1
@@ -321,7 +322,14 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
                 # --- Generate intermediate responses ---
                 if test_data is not None and format_input_fn is not None and base_config is not None:
                     print(f"Generating intermediate responses at step {global_step}...")
-                    for i, entry in tqdm(enumerate(test_data), total=len(test_data), desc="Intermediate Generation", leave=False):
+                    # Determine the subset to evaluate
+                    eval_subset = test_data
+                    desc_suffix = ""
+                    if intermediate_eval_subset_size is not None and intermediate_eval_subset_size > 0:
+                        eval_subset = test_data[:intermediate_eval_subset_size]
+                        desc_suffix = f" (first {intermediate_eval_subset_size})"
+
+                    for i, entry in tqdm(enumerate(eval_subset), total=len(eval_subset), desc=f"Intermediate Gen{desc_suffix}", leave=False):
                         input_text = format_input_fn(entry)
                         with torch.no_grad():
                             token_ids = generate(
@@ -333,9 +341,22 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
                             )
                         generated_text = token_ids_to_text(token_ids, tokenizer)
                         response_text = generated_text[len(input_text):].replace("### Response:", "").strip()
-                        # Store intermediate response, creating the key if it doesn't exist
+                        # Store intermediate response, need original index if using subset
+                        original_index = i # If iterating full list
+                        if intermediate_eval_subset_size is not None and intermediate_eval_subset_size > 0:
+                           original_index = i # The index within the subset is the original index for the first N items
+
                         response_key = f"model_response_step_{global_step}"
-                        test_data[i][response_key] = response_text
+                        test_data[original_index][response_key] = response_text # Use original index
+
+                        # --- Print first example --- #
+                        if original_index ==0:
+                            print(f"-- Step {global_step} Example {original_index} --")
+                            print(f"Input: {input_text}")
+                            print(f"Generated: {response_text}")
+                            print(f"-------------------------")
+                        # ----------------------------- #
+
                     print(f"Intermediate responses for step {global_step} stored.")
                 # --- End of intermediate generation ---
 

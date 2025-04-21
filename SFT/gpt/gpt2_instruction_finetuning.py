@@ -192,6 +192,12 @@ def main(test_mode=False):
 
     customized_collate_fn = partial(custom_collate_fn, device=device, allowed_max_length=1024)
 
+    # --- Configuration for intermediate evaluation ---
+    INTERMEDIATE_EVAL_FREQ = 10  # How often (in training steps) to evaluate
+    INTERMEDIATE_EVAL_ITER = 5  # How many batches for loss estimation
+    INTERMEDIATE_EVAL_SUBSET_SIZE = 3 # How many test examples to generate responses for
+    # -----------------------------------------------
+
     num_workers = 0
     batch_size = 8
 
@@ -268,12 +274,11 @@ def main(test_mode=False):
     print("Loaded model:", CHOOSE_MODEL)
     print(50*"-")
 
-    # --- Generate responses with the base model before fine-tuning --- # TODO: test this
-    print("Generating base model responses for test set...")
-    base_model_responses = []
-    # Use a temporary list to avoid modifying test_data directly during iteration if needed
-    # or directly add to test_data if modification is safe
-    for i, entry in tqdm(enumerate(test_data), total=len(test_data), desc="Base Model Inference"):
+    # --- Generate responses with the base model before fine-tuning --- #
+    print(f"Generating base model responses for the first {INTERMEDIATE_EVAL_SUBSET_SIZE} test examples...")
+    eval_subset_indices = range(INTERMEDIATE_EVAL_SUBSET_SIZE)
+    for i in tqdm(eval_subset_indices, total=INTERMEDIATE_EVAL_SUBSET_SIZE, desc="Base Model Inference"):
+        entry = test_data[i]
         input_text = format_input(entry)
         token_ids = generate(
             model=model,
@@ -308,11 +313,14 @@ def main(test_mode=False):
     torch.manual_seed(123)
     train_losses, val_losses, tokens_seen = train_model_simple(
         model, train_loader, val_loader, optimizer, device,
-        num_epochs=num_epochs, eval_freq=5, eval_iter=5,
+        num_epochs=num_epochs, 
+        eval_freq=INTERMEDIATE_EVAL_FREQ, 
+        eval_iter=INTERMEDIATE_EVAL_ITER,
         start_context=format_input(val_data[0]), tokenizer=tokenizer,
         test_data=test_data,
         format_input_fn=format_input,
-        base_config=BASE_CONFIG
+        base_config=BASE_CONFIG,
+        intermediate_eval_subset_size=INTERMEDIATE_EVAL_SUBSET_SIZE
     )
 
     end_time = time.time()
@@ -343,7 +351,9 @@ def main(test_mode=False):
 
         test_data[i]["model_response"] = response_text
 
-    test_data_path = "instruction-data-with-response-standalone.json"
+    output_dir = os.path.join("SFT", "gpt", "data")
+    os.makedirs(output_dir, exist_ok=True) # Ensure directory exists
+    test_data_path = os.path.join(output_dir, "instruction-data-with-responses-standalone.json")
     with open(test_data_path, "w") as file:
         json.dump(test_data, file, indent=4)  # "indent" for pretty-printing
     print(f"Responses saved as {test_data_path}")
