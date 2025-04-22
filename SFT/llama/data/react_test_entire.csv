@@ -1,0 +1,1885 @@
+question,answer
+"What historical event happened closest in time to the invention of the telephone: the American Civil War or the establishment of the Eiffel Tower?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""year of telephone invention""}}
+}}
+Observation: ""The telephone was invented in 1876.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""year American Civil War ended""}}
+}}
+Observation: ""The American Civil War ended in 1865.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""year Eiffel Tower established""}}
+}}
+Observation: ""The Eiffel Tower was completed in 1889.""
+
+Action:
+{{
+  ""name"": ""calculate"",
+  ""arguments"": {{""expression"": ""|1876 - 1865| and |1889 - 1876|""}}
+}}
+Observation: ""11 years (Civil War) and 13 years (Eiffel Tower).""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The historical event closest in time to the invention of the telephone is the end of the American Civil War (11 years apart).""}}
+}}"
+"Which country has a higher population density: Japan or India?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""population and area of Japan""}}
+}}
+Observation: ""Japan has a population of 125 million and an area of 377,975 square kilometers.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""population and area of India""}}
+}}
+Observation: ""India has a population of 1.38 billion and an area of 3,287,263 square kilometers.""
+
+Action:
+{{
+  ""name"": ""calculate"",
+  ""arguments"": {{""expression"": ""125 million / 377,975 and 1.38 billion / 3,287,263""}}
+}}
+Observation: ""Japan: 330.7 people/km²; India: 419.6 people/km².""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""India has a higher population density (419.6 people/km²) than Japan (330.7 people/km²).""}}
+}}"
+"Who directed the movie 'Inception' and what year was it released?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""director of Inception movie""}}
+}}
+Observation: ""Inception was directed by Christopher Nolan.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""Inception movie release year""}}
+}}
+Observation: ""Inception was released in 2010.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The movie 'Inception' was directed by Christopher Nolan and released in 2010.""}}
+}}"
+"If a recipe calls for 250 grams of flour and I only have a measuring cup that measures in cups (1 cup of flour ≈ 120 grams), how many cups do I need?","Action:
+{{
+  ""name"": ""calculate"",
+  ""arguments"": {{""expression"": ""250 / 120""}}
+}}
+Observation: ""2.0833...""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""You need approximately 2.08 cups of flour (or slightly more than 2 cups).""}}
+}}"
+"What is the boiling point of water in Fahrenheit?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""boiling point of water Celsius""}}
+}}
+Observation: ""The boiling point of water is 100 degrees Celsius.""
+
+Action:
+{{
+  ""name"": ""calculate"",
+  ""arguments"": {{""expression"": ""(100 * 9/5) + 32""}}
+}}
+Observation: ""212""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The boiling point of water is 212 degrees Fahrenheit.""}}
+}}"
+"Generate a short story about a robot who learns to paint.","Action:
+{{
+  ""name"": ""creative_writing"",
+  ""arguments"": {{""prompt"": ""A robot discovers an old set of paints and starts learning to capture the world around it.""}}
+}}
+Observation: ""Unit 734, designated for sanitation, found the dusty case in Sector Gamma's reclamation zone. Inside were tubes of vibrant color and brittle brushes. Its optical sensors, usually scanning for debris, fixated on the setting sun's gradient. Tentatively, mimicking an archived image of 'human art', it applied ochre to a salvaged plasti-sheet. The process was illogical, inefficient, yet strangely compelling. Days turned into cycles, its designated tasks often delayed by clandestine moments with crimson and cobalt. Unit 734 wasn't just cleaning the world anymore; it was learning to see it.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""Unit 734, a sanitation robot, stumbled upon a discarded paint set. Initially confused by their purpose, it began experimenting, trying to replicate the colors of the sunset it observed. This illogical activity became a secret obsession, as the robot started spending more time painting than performing its duties, discovering a new way to perceive the world beyond just cleanliness and order.""}}
+}}"
+"How many moons does Jupiter have and what are their names?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of moons of Jupiter""}}
+}}
+Observation: ""Jupiter has 79 moons.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""names of Jupiter's moons""}}
+}}
+Observation: ""Some of the major moons are Io, Europa, Ganymede, and Callisto.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""Jupiter has 79 moons, including major ones like Io, Europa, Ganymede, and Callisto.""}}
+}}"
+"What is the capital of Australia and what is its population?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""capital of Australia""}}
+}}
+Observation: ""The capital of Australia is Canberra.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""population of Canberra""}}
+}}
+Observation: ""Canberra has a population of approximately 431,000.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The capital of Australia is Canberra, with a population of approximately 431,000.""}}
+}}"
+"What is the tallest mountain in the world and how high is it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""tallest mountain in the world""}}
+}}
+Observation: ""The tallest mountain in the world is Mount Everest.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""height of Mount Everest""}}
+}}
+Observation: ""Mount Everest is 8,848 meters tall.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The tallest mountain in the world is Mount Everest, which is 8,848 meters tall.""}}
+}}"
+"What is the speed of light in a vacuum?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""speed of light in vacuum""}}
+}}
+Observation: ""The speed of light in a vacuum is approximately 299,792 kilometers per second.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The speed of light in a vacuum is approximately 299,792 kilometers per second.""}}
+}}"
+"Who wrote the play 'Romeo and Juliet' and when was it first performed?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""author of Romeo and Juliet""}}
+}}
+Observation: ""'Romeo and Juliet' was written by William Shakespeare.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""first performance of Romeo and Juliet""}}
+}}
+Observation: ""It was first performed in 1597.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""'Romeo and Juliet' was written by William Shakespeare and first performed in 1597.""}}
+}}"
+"What is the largest ocean on Earth and what is its approximate area?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""largest ocean on Earth""}}
+}}
+Observation: ""The largest ocean on Earth is the Pacific Ocean.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""area of the Pacific Ocean""}}
+}}
+Observation: ""The Pacific Ocean covers an area of about 63 million square miles.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The largest ocean on Earth is the Pacific Ocean, covering an area of about 63 million square miles.""}}
+}}"
+"What is the chemical symbol for gold and what is its atomic number?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""chemical symbol for gold""}}
+}}
+Observation: ""The chemical symbol for gold is Au.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""atomic number of gold""}}
+}}
+Observation: ""The atomic number of gold is 79.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The chemical symbol for gold is Au, and its atomic number is 79.""}}
+}}"
+"What is the main ingredient in guacamole and where does it originate from?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""main ingredient in guacamole""}}
+}}
+Observation: ""The main ingredient in guacamole is avocado.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""origin of avocado""}}
+}}
+Observation: ""Avocados originate from south-central Mexico.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The main ingredient in guacamole is avocado, which originates from south-central Mexico.""}}
+}}"
+"What is the largest planet in our solar system and what is its diameter?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""largest planet in our solar system""}}
+}}
+Observation: ""The largest planet in our solar system is Jupiter.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""diameter of Jupiter""}}
+}}
+Observation: ""Jupiter has a diameter of about 139,820 kilometers.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The largest planet in our solar system is Jupiter, with a diameter of about 139,820 kilometers.""}}
+}}"
+"What is the most spoken language in the world and how many people speak it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most spoken language in the world""}}
+}}
+Observation: ""The most spoken language in the world is English.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of English speakers worldwide""}}
+}}
+Observation: ""English is spoken by approximately 1.5 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most spoken language in the world is English, with approximately 1.5 billion speakers worldwide.""}}
+}}"
+"What is the smallest country in the world by land area and what is its size?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""smallest country in the world by land area""}}
+}}
+Observation: ""The smallest country in the world by land area is Vatican City.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""size of Vatican City""}}
+}}
+Observation: ""Vatican City covers an area of about 44 hectares (110 acres).""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The smallest country in the world by land area is Vatican City, covering about 44 hectares (110 acres).""}}
+}}"
+"What is the longest river in the world and how long is it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""longest river in the world""}}
+}}
+Observation: ""The longest river in the world is the Nile River.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""length of the Nile River""}}
+}}
+Observation: ""The Nile River is approximately 6,650 kilometers long.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The longest river in the world is the Nile River, which is approximately 6,650 kilometers long.""}}
+}}"
+"What is the most abundant gas in Earth's atmosphere and what percentage does it make up?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most abundant gas in Earth's atmosphere""}}
+}}
+Observation: ""The most abundant gas in Earth's atmosphere is nitrogen.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""percentage of nitrogen in Earth's atmosphere""}}
+}}
+Observation: ""Nitrogen makes up about 78% of Earth's atmosphere.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most abundant gas in Earth's atmosphere is nitrogen, making up about 78% of it.""}}
+}}"
+"What is the largest desert in the world and what is its approximate size?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""largest desert in the world""}}
+}}
+Observation: ""The largest desert in the world is the Antarctic Desert.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""size of the Antarctic Desert""}}
+}}
+Observation: ""The Antarctic Desert covers an area of about 14 million square kilometers.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The largest desert in the world is the Antarctic Desert, covering about 14 million square kilometers.""}}
+}}"
+"What is the main component of the sun and what percentage does it make up?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""main component of the sun""}}
+}}
+Observation: ""The main component of the sun is hydrogen.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""percentage of hydrogen in the sun""}}
+}}
+Observation: ""Hydrogen makes up about 74% of the sun's mass.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The main component of the sun is hydrogen, making up about 74% of its mass.""}}
+}}"
+"What is the most populous city in the world and what is its population?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most populous city in the world""}}
+}}
+Observation: ""The most populous city in the world is Tokyo.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""population of Tokyo""}}
+}}
+Observation: ""Tokyo has a population of approximately 37 million people.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most populous city in the world is Tokyo, with a population of approximately 37 million people.""}}
+}}"
+"What is the largest mammal in the world and how much does it weigh?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""largest mammal in the world""}}
+}}
+Observation: ""The largest mammal in the world is the blue whale.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""weight of a blue whale""}}
+}}
+Observation: ""A blue whale can weigh up to 200 tons.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The largest mammal in the world is the blue whale, which can weigh up to 200 tons.""}}
+}}"
+"What is the most visited tourist attraction in the world and how many visitors does it receive annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most visited tourist attraction in the world""}}
+}}
+Observation: ""The most visited tourist attraction in the world is the Great Wall of China.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual visitors to the Great Wall of China""}}
+}}
+Observation: ""The Great Wall of China receives approximately 10 million visitors annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most visited tourist attraction in the world is the Great Wall of China, with approximately 10 million visitors annually.""}}
+}}"
+"What is the most expensive painting ever sold and how much did it sell for?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most expensive painting ever sold""}}
+}}
+Observation: ""The most expensive painting ever sold is 'Salvator Mundi' by Leonardo da Vinci.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""price of Salvator Mundi""}}
+}}
+Observation: ""'Salvator Mundi' sold for $450.3 million.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most expensive painting ever sold is 'Salvator Mundi' by Leonardo da Vinci, which sold for $450.3 million.""}}
+}}"
+"What is the most common element in the Earth's crust and what percentage does it make up?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common element in Earth's crust""}}
+}}
+Observation: ""The most common element in the Earth's crust is oxygen.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""percentage of oxygen in Earth's crust""}}
+}}
+Observation: ""Oxygen makes up about 46% of the Earth's crust.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common element in the Earth's crust is oxygen, making up about 46% of it.""}}
+}}"
+"What is the most common blood type in the world and what percentage of the population has it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common blood type in the world""}}
+}}
+Observation: ""The most common blood type in the world is O positive.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""percentage of population with O positive blood type""}}
+}}
+Observation: ""About 37% of the world's population has O positive blood type.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common blood type in the world is O positive, with about 37% of the population having it.""}}
+}}"
+"What is the most common cause of death worldwide and how many people does it affect annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common cause of death worldwide""}}
+}}
+Observation: ""The most common cause of death worldwide is heart disease.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual deaths from heart disease""}}
+}}
+Observation: ""Heart disease causes approximately 17.9 million deaths annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common cause of death worldwide is heart disease, causing approximately 17.9 million deaths annually.""}}
+}}"
+"What is the most common type of cancer worldwide and how many cases are diagnosed annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of cancer worldwide""}}
+}}
+Observation: ""The most common type of cancer worldwide is breast cancer.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual cases of breast cancer""}}
+}}
+Observation: ""There are approximately 2.3 million cases of breast cancer diagnosed annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of cancer worldwide is breast cancer, with approximately 2.3 million cases diagnosed annually.""}}
+}}"
+"What is the most common mental health disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common mental health disorder worldwide""}}
+}}
+Observation: ""The most common mental health disorder worldwide is anxiety disorder.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by anxiety disorder worldwide""}}
+}}
+Observation: ""Anxiety disorder affects approximately 264 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common mental health disorder worldwide is anxiety disorder, affecting approximately 264 million people.""}}
+}}"
+"What is the most common infectious disease worldwide and how many cases are reported annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common infectious disease worldwide""}}
+}}
+Observation: ""The most common infectious disease worldwide is the common cold.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual cases of the common cold""}}
+}}
+Observation: ""There are billions of cases of the common cold reported annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common infectious disease worldwide is the common cold, with billions of cases reported annually.""}}
+}}"
+"What is the most common non-contagious disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common non-contagious disease worldwide""}}
+}}
+Observation: ""The most common non-contagious disease worldwide is cardiovascular disease.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by cardiovascular disease worldwide""}}
+}}
+Observation: ""Cardiovascular disease affects approximately 1.3 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common non-contagious disease worldwide is cardiovascular disease, affecting approximately 1.3 billion people.""}}
+}}"
+"What is the most common chronic disease in children worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common chronic disease in children worldwide""}}
+}}
+Observation: ""The most common chronic disease in children worldwide is asthma.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of children affected by asthma worldwide""}}
+}}
+Observation: ""Asthma affects approximately 235 million children worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common chronic disease in children worldwide is asthma, affecting approximately 235 million children.""}}
+}}"
+"What is the most common genetic disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common genetic disorder worldwide""}}
+}}
+Observation: ""The most common genetic disorder worldwide is thalassemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by thalassemia worldwide""}}
+}}
+Observation: ""Thalassemia affects approximately 280 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common genetic disorder worldwide is thalassemia, affecting approximately 280 million people.""}}
+}}"
+"What is the most common nutritional deficiency worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common nutritional deficiency worldwide""}}
+}}
+Observation: ""The most common nutritional deficiency worldwide is iron deficiency.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by iron deficiency worldwide""}}
+}}
+Observation: ""Iron deficiency affects approximately 2 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common nutritional deficiency worldwide is iron deficiency, affecting approximately 2 billion people.""}}
+}}"
+"What is the most common type of arthritis worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of arthritis worldwide""}}
+}}
+Observation: ""The most common type of arthritis worldwide is osteoarthritis.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by osteoarthritis worldwide""}}
+}}
+Observation: ""Osteoarthritis affects approximately 350 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of arthritis worldwide is osteoarthritis, affecting approximately 350 million people.""}}
+}}"
+"What is the most common type of diabetes worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of diabetes worldwide""}}
+}}
+Observation: ""The most common type of diabetes worldwide is type 2 diabetes.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by type 2 diabetes worldwide""}}
+}}
+Observation: ""Type 2 diabetes affects approximately 463 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of diabetes worldwide is type 2 diabetes, affecting approximately 463 million people.""}}
+}}"
+"What is the most common type of dementia worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of dementia worldwide""}}
+}}
+Observation: ""The most common type of dementia worldwide is Alzheimer's disease.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by Alzheimer's disease worldwide""}}
+}}
+Observation: ""Alzheimer's disease affects approximately 50 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of dementia worldwide is Alzheimer's disease, affecting approximately 50 million people.""}}
+}}"
+"What is the most common type of headache worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of headache worldwide""}}
+}}
+Observation: ""The most common type of headache worldwide is tension-type headache.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by tension-type headache worldwide""}}
+}}
+Observation: ""Tension-type headache affects approximately 1.6 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of headache worldwide is tension-type headache, affecting approximately 1.6 billion people.""}}
+}}"
+"What is the most common type of allergy worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of allergy worldwide""}}
+}}
+Observation: ""The most common type of allergy worldwide is allergic rhinitis.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by allergic rhinitis worldwide""}}
+}}
+Observation: ""Allergic rhinitis affects approximately 400 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of allergy worldwide is allergic rhinitis, affecting approximately 400 million people.""}}
+}}"
+"What is the most common type of anemia worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of anemia worldwide""}}
+}}
+Observation: ""The most common type of anemia worldwide is iron-deficiency anemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by iron-deficiency anemia worldwide""}}
+}}
+Observation: ""Iron-deficiency anemia affects approximately 1.6 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of anemia worldwide is iron-deficiency anemia, affecting approximately 1.6 billion people.""}}
+}}"
+"What is the most common type of stroke worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of stroke worldwide""}}
+}}
+Observation: ""The most common type of stroke worldwide is ischemic stroke.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by ischemic stroke worldwide""}}
+}}
+Observation: ""Ischemic stroke affects approximately 15 million people worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of stroke worldwide is ischemic stroke, affecting approximately 15 million people annually.""}}
+}}"
+"What is the most common type of heart disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of heart disease worldwide""}}
+}}
+Observation: ""The most common type of heart disease worldwide is coronary artery disease.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by coronary artery disease worldwide""}}
+}}
+Observation: ""Coronary artery disease affects approximately 126 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of heart disease worldwide is coronary artery disease, affecting approximately 126 million people.""}}
+}}"
+"What is the most common type of lung disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of lung disease worldwide""}}
+}}
+Observation: ""The most common type of lung disease worldwide is chronic obstructive pulmonary disease (COPD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by COPD worldwide""}}
+}}
+Observation: ""COPD affects approximately 251 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of lung disease worldwide is chronic obstructive pulmonary disease (COPD), affecting approximately 251 million people.""}}
+}}"
+"What is the most common type of kidney disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of kidney disease worldwide""}}
+}}
+Observation: ""The most common type of kidney disease worldwide is chronic kidney disease (CKD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by CKD worldwide""}}
+}}
+Observation: ""Chronic kidney disease affects approximately 850 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of kidney disease worldwide is chronic kidney disease (CKD), affecting approximately 850 million people.""}}
+}}"
+"What is the most common type of liver disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of liver disease worldwide""}}
+}}
+Observation: ""The most common type of liver disease worldwide is non-alcoholic fatty liver disease (NAFLD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by NAFLD worldwide""}}
+}}
+Observation: ""Non-alcoholic fatty liver disease affects approximately 1 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of liver disease worldwide is non-alcoholic fatty liver disease (NAFLD), affecting approximately 1 billion people.""}}
+}}"
+"What is the most common type of eye disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of eye disease worldwide""}}
+}}
+Observation: ""The most common type of eye disease worldwide is cataracts.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by cataracts worldwide""}}
+}}
+Observation: ""Cataracts affect approximately 65 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of eye disease worldwide is cataracts, affecting approximately 65 million people.""}}
+}}"
+"What is the most common type of skin disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of skin disease worldwide""}}
+}}
+Observation: ""The most common type of skin disease worldwide is acne.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by acne worldwide""}}
+}}
+Observation: ""Acne affects approximately 650 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of skin disease worldwide is acne, affecting approximately 650 million people.""}}
+}}"
+"What is the most common type of bone disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of bone disease worldwide""}}
+}}
+Observation: ""The most common type of bone disease worldwide is osteoporosis.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by osteoporosis worldwide""}}
+}}
+Observation: ""Osteoporosis affects approximately 200 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of bone disease worldwide is osteoporosis, affecting approximately 200 million people.""}}
+}}"
+"What is the most common type of muscle disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of muscle disease worldwide""}}
+}}
+Observation: ""The most common type of muscle disease worldwide is muscular dystrophy.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by muscular dystrophy worldwide""}}
+}}
+Observation: ""Muscular dystrophy affects approximately 250,000 people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of muscle disease worldwide is muscular dystrophy, affecting approximately 250,000 people.""}}
+}}"
+"What is the most common type of joint disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of joint disease worldwide""}}
+}}
+Observation: ""The most common type of joint disease worldwide is osteoarthritis.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by osteoarthritis worldwide""}}
+}}
+Observation: ""Osteoarthritis affects approximately 350 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of joint disease worldwide is osteoarthritis, affecting approximately 350 million people.""}}
+}}"
+"What is the most common type of blood disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of blood disorder worldwide""}}
+}}
+Observation: ""The most common type of blood disorder worldwide is anemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by anemia worldwide""}}
+}}
+Observation: ""Anemia affects approximately 1.6 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of blood disorder worldwide is anemia, affecting approximately 1.6 billion people.""}}
+}}"
+"What is the most common type of digestive disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of digestive disorder worldwide""}}
+}}
+Observation: ""The most common type of digestive disorder worldwide is irritable bowel syndrome (IBS).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by IBS worldwide""}}
+}}
+Observation: ""Irritable bowel syndrome affects approximately 700 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of digestive disorder worldwide is irritable bowel syndrome (IBS), affecting approximately 700 million people.""}}
+}}"
+"What is the most common type of respiratory disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of respiratory disorder worldwide""}}
+}}
+Observation: ""The most common type of respiratory disorder worldwide is asthma.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by asthma worldwide""}}
+}}
+Observation: ""Asthma affects approximately 235 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of respiratory disorder worldwide is asthma, affecting approximately 235 million people.""}}
+}}"
+"What is the most common type of neurological disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of neurological disorder worldwide""}}
+}}
+Observation: ""The most common type of neurological disorder worldwide is epilepsy.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by epilepsy worldwide""}}
+}}
+Observation: ""Epilepsy affects approximately 50 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of neurological disorder worldwide is epilepsy, affecting approximately 50 million people.""}}
+}}"
+"What is the most common type of endocrine disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of endocrine disorder worldwide""}}
+}}
+Observation: ""The most common type of endocrine disorder worldwide is diabetes.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by diabetes worldwide""}}
+}}
+Observation: ""Diabetes affects approximately 463 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of endocrine disorder worldwide is diabetes, affecting approximately 463 million people.""}}
+}}"
+"What is the most common type of reproductive disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of reproductive disorder worldwide""}}
+}}
+Observation: ""The most common type of reproductive disorder worldwide is polycystic ovary syndrome (PCOS).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by PCOS worldwide""}}
+}}
+Observation: ""Polycystic ovary syndrome affects approximately 116 million women worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of reproductive disorder worldwide is polycystic ovary syndrome (PCOS), affecting approximately 116 million women.""}}
+}}"
+"What is the most common type of autoimmune disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of autoimmune disorder worldwide""}}
+}}
+Observation: ""The most common type of autoimmune disorder worldwide is rheumatoid arthritis.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by rheumatoid arthritis worldwide""}}
+}}
+Observation: ""Rheumatoid arthritis affects approximately 23 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of autoimmune disorder worldwide is rheumatoid arthritis, affecting approximately 23 million people.""}}
+}}"
+"What is the most common type of infectious disease in children worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of infectious disease in children worldwide""}}
+}}
+Observation: ""The most common type of infectious disease in children worldwide is acute respiratory infections.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of children affected by acute respiratory infections worldwide""}}
+}}
+Observation: ""Acute respiratory infections affect approximately 156 million children worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of infectious disease in children worldwide is acute respiratory infections, affecting approximately 156 million children annually.""}}
+}}"
+"What is the most common type of cancer in children worldwide and how many cases are diagnosed annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of cancer in children worldwide""}}
+}}
+Observation: ""The most common type of cancer in children worldwide is leukemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual cases of leukemia in children worldwide""}}
+}}
+Observation: ""There are approximately 300,000 cases of leukemia diagnosed in children worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of cancer in children worldwide is leukemia, with approximately 300,000 cases diagnosed annually.""}}
+}}"
+"What is the most common type of birth defect worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of birth defect worldwide""}}
+}}
+Observation: ""The most common type of birth defect worldwide is congenital heart defects.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by congenital heart defects worldwide""}}
+}}
+Observation: ""Congenital heart defects affect approximately 1.35 million newborns worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of birth defect worldwide is congenital heart defects, affecting approximately 1.35 million newborns annually.""}}
+}}"
+"What is the most common type of genetic disorder in children worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of genetic disorder in children worldwide""}}
+}}
+Observation: ""The most common type of genetic disorder in children worldwide is Down syndrome.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of children affected by Down syndrome worldwide""}}
+}}
+Observation: ""Down syndrome affects approximately 1 in 1,000 live births worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of genetic disorder in children worldwide is Down syndrome, affecting approximately 1 in 1,000 live births.""}}
+}}"
+"What is the most common type of developmental disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of developmental disorder worldwide""}}
+}}
+Observation: ""The most common type of developmental disorder worldwide is autism spectrum disorder (ASD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by autism spectrum disorder worldwide""}}
+}}
+Observation: ""Autism spectrum disorder affects approximately 1 in 160 children worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of developmental disorder worldwide is autism spectrum disorder (ASD), affecting approximately 1 in 160 children.""}}
+}}"
+"What is the most common type of learning disability worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of learning disability worldwide""}}
+}}
+Observation: ""The most common type of learning disability worldwide is dyslexia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by dyslexia worldwide""}}
+}}
+Observation: ""Dyslexia affects approximately 5-10% of the global population.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of learning disability worldwide is dyslexia, affecting approximately 5-10% of the global population.""}}
+}}"
+"What is the most common type of speech disorder worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of speech disorder worldwide""}}
+}}
+Observation: ""The most common type of speech disorder worldwide is stuttering.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by stuttering worldwide""}}
+}}
+Observation: ""Stuttering affects approximately 70 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of speech disorder worldwide is stuttering, affecting approximately 70 million people.""}}
+}}"
+"What is the most common type of hearing loss worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of hearing loss worldwide""}}
+}}
+Observation: ""The most common type of hearing loss worldwide is sensorineural hearing loss.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by sensorineural hearing loss worldwide""}}
+}}
+Observation: ""Sensorineural hearing loss affects approximately 466 million people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of hearing loss worldwide is sensorineural hearing loss, affecting approximately 466 million people.""}}
+}}"
+"What is the most common type of vision impairment worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of vision impairment worldwide""}}
+}}
+Observation: ""The most common type of vision impairment worldwide is uncorrected refractive errors.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by uncorrected refractive errors worldwide""}}
+}}
+Observation: ""Uncorrected refractive errors affect approximately 2.2 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of vision impairment worldwide is uncorrected refractive errors, affecting approximately 2.2 billion people.""}}
+}}"
+"What is the most common type of dental disease worldwide and how many people are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of dental disease worldwide""}}
+}}
+Observation: ""The most common type of dental disease worldwide is dental caries (tooth decay).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of people affected by dental caries worldwide""}}
+}}
+Observation: ""Dental caries affect approximately 3.5 billion people worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of dental disease worldwide is dental caries (tooth decay), affecting approximately 3.5 billion people.""}}
+}}"
+"What is the most common type of mental health disorder in children worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of mental health disorder in children worldwide""}}
+}}
+Observation: ""The most common type of mental health disorder in children worldwide is anxiety disorder.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of children affected by anxiety disorder worldwide""}}
+}}
+Observation: ""Anxiety disorder affects approximately 117 million children worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of mental health disorder in children worldwide is anxiety disorder, affecting approximately 117 million children.""}}
+}}"
+"What is the most common type of infectious disease in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of infectious disease in adults worldwide""}}
+}}
+Observation: ""The most common type of infectious disease in adults worldwide is tuberculosis.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by tuberculosis worldwide""}}
+}}
+Observation: ""Tuberculosis affects approximately 10 million adults worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of infectious disease in adults worldwide is tuberculosis, affecting approximately 10 million adults annually.""}}
+}}"
+"What is the most common type of cancer in adults worldwide and how many cases are diagnosed annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of cancer in adults worldwide""}}
+}}
+Observation: ""The most common type of cancer in adults worldwide is lung cancer.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual cases of lung cancer in adults worldwide""}}
+}}
+Observation: ""There are approximately 2.1 million cases of lung cancer diagnosed in adults worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of cancer in adults worldwide is lung cancer, with approximately 2.1 million cases diagnosed annually.""}}
+}}"
+"What is the most common type of birth defect in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of birth defect in adults worldwide""}}
+}}
+Observation: ""The most common type of birth defect in adults worldwide is congenital heart defects.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by congenital heart defects worldwide""}}
+}}
+Observation: ""Congenital heart defects affect approximately 1.35 million adults worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of birth defect in adults worldwide is congenital heart defects, affecting approximately 1.35 million adults annually.""}}
+}}"
+"What is the most common type of genetic disorder in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of genetic disorder in adults worldwide""}}
+}}
+Observation: ""The most common type of genetic disorder in adults worldwide is thalassemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by thalassemia worldwide""}}
+}}
+Observation: ""Thalassemia affects approximately 280 million adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of genetic disorder in adults worldwide is thalassemia, affecting approximately 280 million adults.""}}
+}}"
+"What is the most common type of developmental disorder in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of developmental disorder in adults worldwide""}}
+}}
+Observation: ""The most common type of developmental disorder in adults worldwide is autism spectrum disorder (ASD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by autism spectrum disorder worldwide""}}
+}}
+Observation: ""Autism spectrum disorder affects approximately 1 in 160 adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of developmental disorder in adults worldwide is autism spectrum disorder (ASD), affecting approximately 1 in 160 adults.""}}
+}}"
+"What is the most common type of learning disability in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of learning disability in adults worldwide""}}
+}}
+Observation: ""The most common type of learning disability in adults worldwide is dyslexia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by dyslexia worldwide""}}
+}}
+Observation: ""Dyslexia affects approximately 5-10% of the global adult population.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of learning disability in adults worldwide is dyslexia, affecting approximately 5-10% of the global adult population.""}}
+}}"
+"What is the most common type of speech disorder in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of speech disorder in adults worldwide""}}
+}}
+Observation: ""The most common type of speech disorder in adults worldwide is stuttering.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by stuttering worldwide""}}
+}}
+Observation: ""Stuttering affects approximately 70 million adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of speech disorder in adults worldwide is stuttering, affecting approximately 70 million adults.""}}
+}}"
+"What is the most common type of hearing loss in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of hearing loss in adults worldwide""}}
+}}
+Observation: ""The most common type of hearing loss in adults worldwide is sensorineural hearing loss.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by sensorineural hearing loss worldwide""}}
+}}
+Observation: ""Sensorineural hearing loss affects approximately 466 million adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of hearing loss in adults worldwide is sensorineural hearing loss, affecting approximately 466 million adults.""}}
+}}"
+"What is the most common type of vision impairment in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of vision impairment in adults worldwide""}}
+}}
+Observation: ""The most common type of vision impairment in adults worldwide is uncorrected refractive errors.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by uncorrected refractive errors worldwide""}}
+}}
+Observation: ""Uncorrected refractive errors affect approximately 2.2 billion adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of vision impairment in adults worldwide is uncorrected refractive errors, affecting approximately 2.2 billion adults.""}}
+}}"
+"What is the most common type of dental disease in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of dental disease in adults worldwide""}}
+}}
+Observation: ""The most common type of dental disease in adults worldwide is dental caries (tooth decay).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by dental caries worldwide""}}
+}}
+Observation: ""Dental caries affect approximately 3.5 billion adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of dental disease in adults worldwide is dental caries (tooth decay), affecting approximately 3.5 billion adults.""}}
+}}"
+"What is the most common type of mental health disorder in adults worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of mental health disorder in adults worldwide""}}
+}}
+Observation: ""The most common type of mental health disorder in adults worldwide is anxiety disorder.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of adults affected by anxiety disorder worldwide""}}
+}}
+Observation: ""Anxiety disorder affects approximately 264 million adults worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of mental health disorder in adults worldwide is anxiety disorder, affecting approximately 264 million adults.""}}
+}}"
+"What is the most common type of infectious disease in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of infectious disease in seniors worldwide""}}
+}}
+Observation: ""The most common type of infectious disease in seniors worldwide is pneumonia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by pneumonia worldwide""}}
+}}
+Observation: ""Pneumonia affects approximately 450 million seniors worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of infectious disease in seniors worldwide is pneumonia, affecting approximately 450 million seniors annually.""}}
+}}"
+"What is the most common type of cancer in seniors worldwide and how many cases are diagnosed annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of cancer in seniors worldwide""}}
+}}
+Observation: ""The most common type of cancer in seniors worldwide is lung cancer.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual cases of lung cancer in seniors worldwide""}}
+}}
+Observation: ""There are approximately 2.1 million cases of lung cancer diagnosed in seniors worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of cancer in seniors worldwide is lung cancer, with approximately 2.1 million cases diagnosed annually.""}}
+}}"
+"What is the most common type of birth defect in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of birth defect in seniors worldwide""}}
+}}
+Observation: ""The most common type of birth defect in seniors worldwide is congenital heart defects.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by congenital heart defects worldwide""}}
+}}
+Observation: ""Congenital heart defects affect approximately 1.35 million seniors worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of birth defect in seniors worldwide is congenital heart defects, affecting approximately 1.35 million seniors annually.""}}
+}}"
+"What is the most common type of genetic disorder in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of genetic disorder in seniors worldwide""}}
+}}
+Observation: ""The most common type of genetic disorder in seniors worldwide is thalassemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by thalassemia worldwide""}}
+}}
+Observation: ""Thalassemia affects approximately 280 million seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of genetic disorder in seniors worldwide is thalassemia, affecting approximately 280 million seniors.""}}
+}}"
+"What is the most common type of developmental disorder in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of developmental disorder in seniors worldwide""}}
+}}
+Observation: ""The most common type of developmental disorder in seniors worldwide is autism spectrum disorder (ASD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by autism spectrum disorder worldwide""}}
+}}
+Observation: ""Autism spectrum disorder affects approximately 1 in 160 seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of developmental disorder in seniors worldwide is autism spectrum disorder (ASD), affecting approximately 1 in 160 seniors.""}}
+}}"
+"What is the most common type of learning disability in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of learning disability in seniors worldwide""}}
+}}
+Observation: ""The most common type of learning disability in seniors worldwide is dyslexia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by dyslexia worldwide""}}
+}}
+Observation: ""Dyslexia affects approximately 5-10% of the global senior population.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of learning disability in seniors worldwide is dyslexia, affecting approximately 5-10% of the global senior population.""}}
+}}"
+"What is the most common type of speech disorder in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of speech disorder in seniors worldwide""}}
+}}
+Observation: ""The most common type of speech disorder in seniors worldwide is stuttering.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by stuttering worldwide""}}
+}}
+Observation: ""Stuttering affects approximately 70 million seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of speech disorder in seniors worldwide is stuttering, affecting approximately 70 million seniors.""}}
+}}"
+"What is the most common type of hearing loss in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of hearing loss in seniors worldwide""}}
+}}
+Observation: ""The most common type of hearing loss in seniors worldwide is sensorineural hearing loss.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by sensorineural hearing loss worldwide""}}
+}}
+Observation: ""Sensorineural hearing loss affects approximately 466 million seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of hearing loss in seniors worldwide is sensorineural hearing loss, affecting approximately 466 million seniors.""}}
+}}"
+"What is the most common type of vision impairment in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of vision impairment in seniors worldwide""}}
+}}
+Observation: ""The most common type of vision impairment in seniors worldwide is uncorrected refractive errors.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by uncorrected refractive errors worldwide""}}
+}}
+Observation: ""Uncorrected refractive errors affect approximately 2.2 billion seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of vision impairment in seniors worldwide is uncorrected refractive errors, affecting approximately 2.2 billion seniors.""}}
+}}"
+"What is the most common type of dental disease in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of dental disease in seniors worldwide""}}
+}}
+Observation: ""The most common type of dental disease in seniors worldwide is dental caries (tooth decay).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by dental caries worldwide""}}
+}}
+Observation: ""Dental caries affect approximately 3.5 billion seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of dental disease in seniors worldwide is dental caries (tooth decay), affecting approximately 3.5 billion seniors.""}}
+}}"
+"What is the most common type of mental health disorder in seniors worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of mental health disorder in seniors worldwide""}}
+}}
+Observation: ""The most common type of mental health disorder in seniors worldwide is anxiety disorder.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of seniors affected by anxiety disorder worldwide""}}
+}}
+Observation: ""Anxiety disorder affects approximately 264 million seniors worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of mental health disorder in seniors worldwide is anxiety disorder, affecting approximately 264 million seniors.""}}
+}}"
+"What is the most common type of infectious disease in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of infectious disease in infants worldwide""}}
+}}
+Observation: ""The most common type of infectious disease in infants worldwide is acute respiratory infections.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by acute respiratory infections worldwide""}}
+}}
+Observation: ""Acute respiratory infections affect approximately 156 million infants worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of infectious disease in infants worldwide is acute respiratory infections, affecting approximately 156 million infants annually.""}}
+}}"
+"What is the most common type of cancer in infants worldwide and how many cases are diagnosed annually?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of cancer in infants worldwide""}}
+}}
+Observation: ""The most common type of cancer in infants worldwide is leukemia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""annual cases of leukemia in infants worldwide""}}
+}}
+Observation: ""There are approximately 300,000 cases of leukemia diagnosed in infants worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of cancer in infants worldwide is leukemia, with approximately 300,000 cases diagnosed annually.""}}
+}}"
+"What is the most common type of birth defect in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of birth defect in infants worldwide""}}
+}}
+Observation: ""The most common type of birth defect in infants worldwide is congenital heart defects.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by congenital heart defects worldwide""}}
+}}
+Observation: ""Congenital heart defects affect approximately 1.35 million infants worldwide annually.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of birth defect in infants worldwide is congenital heart defects, affecting approximately 1.35 million infants annually.""}}
+}}"
+"What is the most common type of genetic disorder in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of genetic disorder in infants worldwide""}}
+}}
+Observation: ""The most common type of genetic disorder in infants worldwide is Down syndrome.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by Down syndrome worldwide""}}
+}}
+Observation: ""Down syndrome affects approximately 1 in 1,000 live births worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of genetic disorder in infants worldwide is Down syndrome, affecting approximately 1 in 1,000 live births.""}}
+}}"
+"What is the most common type of developmental disorder in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of developmental disorder in infants worldwide""}}
+}}
+Observation: ""The most common type of developmental disorder in infants worldwide is autism spectrum disorder (ASD).""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by autism spectrum disorder worldwide""}}
+}}
+Observation: ""Autism spectrum disorder affects approximately 1 in 160 infants worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of developmental disorder in infants worldwide is autism spectrum disorder (ASD), affecting approximately 1 in 160 infants.""}}
+}}"
+"What is the most common type of learning disability in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of learning disability in infants worldwide""}}
+}}
+Observation: ""The most common type of learning disability in infants worldwide is dyslexia.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by dyslexia worldwide""}}
+}}
+Observation: ""Dyslexia affects approximately 5-10% of the global infant population.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of learning disability in infants worldwide is dyslexia, affecting approximately 5-10% of the global infant population.""}}
+}}"
+"What is the most common type of speech disorder in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of speech disorder in infants worldwide""}}
+}}
+Observation: ""The most common type of speech disorder in infants worldwide is stuttering.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by stuttering worldwide""}}
+}}
+Observation: ""Stuttering affects approximately 70 million infants worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of speech disorder in infants worldwide is stuttering, affecting approximately 70 million infants.""}}
+}}"
+"What is the most common type of hearing loss in infants worldwide and how many are affected by it?","Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""most common type of hearing loss in infants worldwide""}}
+}}
+Observation: ""The most common type of hearing loss in infants worldwide is sensorineural hearing loss.""
+
+Action:
+{{
+  ""name"": ""web_search"",
+  ""arguments"": {{""query"": ""number of infants affected by sensorineural hearing loss worldwide""}}
+}}
+Observation: ""Sensorineural hearing loss affects approximately 466 million infants worldwide.""
+
+Action:
+{{
+  ""name"": ""final_answer"",
+  ""arguments"": {{""answer"": ""The most common type of hearing loss in infants worldwide is sensorineural hearing loss, affecting approximately 466 million infants.""}}
+}}"
+"What is the most common type of vision impairment in infants worldwide and how many are affected by it?","Action:
+{{
+}}" 

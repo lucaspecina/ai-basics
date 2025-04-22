@@ -15,6 +15,12 @@ def parse_args():
         default="meta-llama/Llama-3.2-1B-Instruct", 
         help="The model ID from Hugging Face to finetune."
     )
+    parser.add_argument(
+        "--data_file_name", 
+        type=str, 
+        default="react_masked.csv", 
+        help="The name of the CSV file in the data directory to use for finetuning."
+    )
     # Add other arguments here if needed in the future
     return parser.parse_args()
 
@@ -23,9 +29,14 @@ args = parse_args()
 
 # --- Global Config & Paths (adjust as needed) ---
 ROOT_DIR = r"C:\\Users\\YT40432\\Desktop\\lp\\research\\lucaspecina\\ai-basics"
+DATA_PATH_prefix = os.path.join(ROOT_DIR, "ai-basics", "SFT", "llama", "data")
+PROGRESS_LOG_PATH_prefix = os.path.join(ROOT_DIR, 'ai-basics', 'SFT', 'llama', 'training_progress_results')
+# Use the data_file_name argument to construct the full data path
+DATA_PATH = os.path.join(DATA_PATH_prefix, args.data_file_name) 
+data_file_name_base = os.path.basename(DATA_PATH).replace('.csv', '') # Get base name without extension
+print(f"Using data file: {data_file_name_base}")
+PROGRESS_LOG_PATH = os.path.join(PROGRESS_LOG_PATH_prefix, f"training_progress-{data_file_name_base}.json")
 MODELS_DIR = os.path.join(ROOT_DIR, "models\\sft-llama")
-PROGRESS_LOG_PATH = os.path.join(MODELS_DIR, "training_progress.json")
-DATA_PATH = "SFT/llama/data/sarcasm_shorter.csv"
 
 # Fixed questions to monitor progress
 FIXED_QUESTIONS = [

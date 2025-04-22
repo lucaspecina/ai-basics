@@ -1,0 +1,8 @@
+{
+    "0": {
+        "Explain the concept of supervised learning in simple terms.": "Supervised learning is a type of machine learning where an algorithm is trained on labeled data, which means it's given a specific output (the correct answer) for a particular input (the data it's being trained on). Here's a simple breakdown:\n\n**Supervised Learning Steps:**\n\n1. **Data Collection**: A dataset is collected, which includes a mix of input data (features) and corresponding labels or outputs.\n2. **Data Preprocessing**: The data is cleaned, processed, and prepared",
+        "What is the capital of France?": "The capital of France is Paris.",
+        "Write a short poem about a cat.": "Whiskered feline, eyes so bright,\nPurrs in the morning light.\nYour soft fur, a gentle hue,\nInviting all to snuggle up anew.\n\nYour playful pounces, a joy to see,\nA ball of energy, wild and free.\nYour little nose, a twitching guide,\nAs you prowl through the evening tide.\n\nWith a flick of your tail, you reign,\nA regal creature, with a gentle brain.\nYour love is pure, your affection true",
+        "Summarize the main idea of the theory of relativity.": "The theory of relativity, developed by Albert Einstein, is a fundamental concept in modern physics that challenges traditional notions of space, time, and gravity. The main ideas can be summarized as follows:\n\n**Special Relativity (1905)**\n\n1. **The laws of physics are the same for all observers in uniform motion**: This theory states that the laws of physics are the same for all observers in relative motion, regardless of their speed or position in the universe.\n2. **The speed of light"
+    }
+}
