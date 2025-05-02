@@ -29,7 +29,7 @@
             "name": "Debug Backprop",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/NN/backprop.py",
+            "program": "${workspaceFolder}/NN/backprop_nn.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "cwd": "${workspaceFolder}"
