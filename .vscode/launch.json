@@ -33,6 +33,15 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug GPT-2 Inference",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/LLM/gpt/gpt2_inference.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
