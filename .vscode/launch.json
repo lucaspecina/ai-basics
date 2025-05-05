@@ -42,6 +42,19 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug mingpt generate",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/LLM/mingpt/generate.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--model_type",
+                "gpt2-medium"
+            ],
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
