@@ -8,6 +8,8 @@ __pycache__/
 
 # Checkpoints
 NN/model_checkpoints/
+NN/tb_traces/
+NN/perf_logs/
 
 # Distribution / packaging
 .Python
